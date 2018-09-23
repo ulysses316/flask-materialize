@@ -9,7 +9,7 @@ def poli(x):
     y=pow(x,2)-(3*x)-4
     return(y)
 #Programa principal
-print ("Este programa encuentra una raíz, por el método de bisección")
+print ("Este programa encuentra una raiz, por el metodo de biseccion")
 xi=float(input(' Introduce el valor de xi '))
 xs=float(input(' Introduce el valor de xs '))
 error=float((input(' Introduce el error ')))
@@ -20,9 +20,8 @@ while (abs(poli(xa)) > error):
         xs=xa
         signo="negativo"
         limite="superior"
-    else: 
+    else:
         xs=xa
         signo="positivo"
         limite="inferior"
 print(xa)
-

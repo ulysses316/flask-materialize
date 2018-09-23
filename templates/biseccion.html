@@ -1,5 +1,33 @@
 {%extends 'base/base.html'%}
 
 {% block content %}
-<h4>Que chinga whats!?</h4>
+{% from '_macro.html' import renderBiseccion %}
+<style media="screen">
+  dd{
+    margin-left: 0;
+  }
+</style>
+<section class="container">
+  <div class="row">
+    <div class="card col m6 s12 offset-m3">
+      <div class="card-content">
+        <form method="post">
+            {{renderBiseccion(form.xi, class='validate')}}
+            {{renderBiseccion(form.xs, class='validate')}}
+            {{renderBiseccion(form.error, class='validate')}}
+            <div id="succes">
+              <div class="row">
+                <div class="col m12">
+                  <button type="submit" value="biseccion"  name="button">Enviar</button>
+                </div>
+              </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+</section>
 {%endblock%}

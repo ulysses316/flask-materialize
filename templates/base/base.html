@@ -1,0 +1,46 @@
+{% extends "material/base.html" %}
+{% import "material/utils.html" as util %}
+{% import "material/wtf.html" as wtf %}
+
+{%block metas%}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="../static/materialize/css/materialize.min.css"  media="screen,projection"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+{%endblock%}
+
+{% block navbar %}
+<nav>
+  <div class="nav-wrapper grey lighten-4">
+    <a href="#!" class="brand-logo black-text">Estructura <span class="hide-on-small-only">de datos</span> </a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a class="black-text" href="sass.html">Biseccion</a></li>
+      <li><a class="black-text" href="badges.html">Newton</a></li>
+      <li><a class="black-text" href="collapsible.html">Newton</a></li>
+      <li><a class="black-text" href="mobile.html">Paralelas</a></li>
+      <li><a class="black-text" href="badges.html">Gauss</a></li>
+      <li><a class="black-text" href="collapsible.html">Gauss</a></li>
+      <li><a class="black-text" href="mobile.html">Mobile</a></li>
+    </ul>
+  </div>
+</nav>
+<ul class="sidenav" id="mobile-demo">
+  <li><a href="sass.html">Biseccion</a></li>
+  <li><a href="badges.html">Newton</a></li>
+  <li><a href="collapsible.html">Newton</a></li>
+  <li><a href="mobile.html">Paralelas</a></li>
+  <li><a href="badges.html">Gauss</a></li>
+  <li><a href="collapsible.html">Gauss</a></li>
+  <li><a href="mobile.html">Mobile</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+{%endblock%}
+
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../static/materialize/js/materialize.min.js"></script>
+<script src="../static/materialize/js/script.js" charset="utf-8"></script>
+{% endblock %}

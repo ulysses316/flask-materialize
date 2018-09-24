@@ -20,30 +20,22 @@ def biseccion():
         print fbiseccion.xi.data
         print fbiseccion.xs.data
         print fbiseccion.error.data
-    return render_template('biseccion.html', form = fbiseccion)
-        # xistring = fbiseccion.xi.data
-        # xstring = fbiseccion.xs.data
-        # errorstring =  fbiseccion.error.data
-        # xi = int(xistring)
-        # xs = int(xstring)
-        # error = int(errorstring)
+        print fbiseccion.iteraciones.data
+        xistring = fbiseccion.xi.data
+        xstring = fbiseccion.xs.data
+        errorstring =  fbiseccion.error.data
+        iteracionesstring = fbiseccion.iteraciones.data
+        xi = float(xistring)
+        xs = float(xstring)
+        error = float(errorstring)
+        iteraciones =float(iteracionesstring)
+        from metodo import f
+        from metodo import biseccion
+        resultado =biseccion(xi,xs,error,iteraciones)
+        # print(biseccion(xi,xs,error,iteraciones))
 
-        # def poli(x):
-        #     y=pow(x,2)-(3*x)-4
-        #     return(y)
-        #     #Programa principal
-        # xa = (xi+xs)/2.0
-        # while (abs(poli(xa)) > error):
-        #     xa = (xi+xs)/2.0
-        #     if poli(xi)*poli(xa) < 0.00:
-        #         xs=xa
-        #         signo="negativo"
-        #         limite="superior"
-        #     else:
-        #         xs=xa
-        #         signo="positivo"
-        #         limite="inferior"
-        #         print(xa)
+
+    return render_template('biseccion.html', form = fbiseccion, resultado=resultado)
 
 
 

@@ -15,6 +15,7 @@
             {{renderBiseccion(form.xi, class='validate')}}
             {{renderBiseccion(form.xs, class='validate')}}
             {{renderBiseccion(form.error, class='validate')}}
+            {{renderBiseccion(form.iteraciones, class='validate')}}
             <div id="succes">
               <div class="row">
                 <div class="col m12">
@@ -26,8 +27,13 @@
       </div>
     </div>
   </div>
-
-
-
+  <div class="container">
+    <div class="row">
+      <div class="col m12 s12 center">
+        <h4>El resultado es:</h4>
+        {{resultado}}
+      </div>
+    </div>
+  </div>
 </section>
 {%endblock%}

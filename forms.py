@@ -2,10 +2,10 @@ from wtforms import Form
 from wtforms import StringField
 
 class FormularioBiseccion(Form):
-    xi=StringField('Introduce el valor de xi')
-    xs=StringField('Introduce el valor de xs')
-    error=StringField('Introduce el error')
-
+    xi=StringField('Introduce el valor de xi: ')
+    xs=StringField('Introduce el valor de xs: ')
+    error=StringField('Introduce la tolerancia: ')
+    iteraciones =StringField('Dame el numero de iteraciones: ')
 #BISECCION
 # Para el metodo de biseccion nesesitamos 3 inputs
 # Introduce el valor de xi
